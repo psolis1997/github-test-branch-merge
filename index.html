@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Quik - Basic Hero Layout</title>
+</head>
+
+<body>
+    <nav>
+        <div id="nav-logo">
+            <img src="img/logo.svg" alt="quik logo">
+        </div>
+        <div id="nav-links">
+            <i id="hamburger-icon" class="bi bi-list"></i>
+            <ul id="nav-list">
+                <li>Home</li>
+                <li class="dropdown">
+                    About <i class="bi bi-chevron-down"></i>
+                    <div class="dropdown-content">
+                        <p>More stuff!</p>
+                        <p>Some other stuff!</p>
+                    </div>
+                </li>
+                <li>Contact</li>
+            </ul>
+        </div>
+    </nav>
+    <div id="page-content">
+        <div id="hero">
+            <div id="hero-image-column">
+                <img src="img/hero-image.svg" alt="ginger man sitting at a desk">
+            </div>
+            <div id="hero-text-column">
+                <h1>It's time to amplify your <span id="blue-text">online business</span></h1>
+                <p id="blurb">
+                    Build a beautiful, modern website with flexible Bootstrap components built from scratch.
+                </p>
+                <a class="button-link" href="/get-started.html">Get started <i class="bi bi-chevron-right"></i></a>
+            </div>
+        </div>
+        <div id="feature-section">
+            <div class="badge">Get started</div>
+            <h2>Carefully crafted components ready to use in your project
+            </h2>
+            <p class="body-text">Use Atomic Design to build components, sections and, then, pages.</p>
+            <div class="feature-boxes-container">
+                <div class="feature-box">
+                    <img src="img/feature-desk.svg" alt="woman at a desk">
+                    <h3>Unleash your creativity</h3>
+                    <p>Quick Website UI Kit (FREE) contains components and pages that are easy to customize and change.
+                    </p>
+                </div>
+                <div class="feature-box">
+                    <img src="img/feature-app.svg" alt="people interacting with a app">
+                    <h3>Get more results</h3>
+                    <p>Quick Website UI Kit (FREE) contains components and pages that are easy to customize and change.
+                    </p>
+                </div>
+                <div class="feature-box">
+                    <img src="img/feature-rocket.svg" alt="woman on a rocket">
+                    <h3>Increase your audience</h3>
+                    <p>Quick Website UI Kit (FREE) contains components and pages that are easy to customize and change.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- page content ends    -->
+    </div>
+    <!-- scripts -->
+    <!-- we run the scripts here so the whole HTML page loads first -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

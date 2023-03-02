@@ -1,0 +1,337 @@
+/* ---------imports--------- */
+
+/* bootstrap icons */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');
+
+/* resets */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* -----------elements--------- */
+
+/* general */
+
+body {
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+p,
+#nav-links li {
+    color: #7e7e7e;
+}
+
+/* typography */
+
+h2,
+h3 {
+    color: #1c2e53;
+}
+
+h2 {
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.body-text {
+    line-height: 27px;
+    font-size: 19px;
+}
+
+/* badges */
+
+.badge {
+    background: #c0ffc0;
+    color: green;
+    padding: 10px 15px;
+    display: inline-block;
+    border-radius: 40px;
+    margin-bottom: 20px;
+}
+
+/* .badge:after {
+    content: "Hello";
+    display: absolute;
+    top: 0;
+    left: 0;
+} */
+
+/* buttons */
+
+.button-link {
+    background: #008aff;
+    color: white;
+    padding: 15px 20px;
+    display: inline-block;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+/* navbar */
+
+nav {
+    display: flex;
+    padding: 12px 16px;
+}
+
+#nav-logo {
+    width: 50%;
+}
+
+#nav-logo img {
+    width: 95px;
+}
+
+#nav-links {
+    width: 50%;
+    text-align: right;
+}
+
+#hamburger-icon {
+    font-size: 33px;
+    color: #7e7e7e;
+    position: relative;
+    top: -4px;
+}
+
+#nav-list {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    left: 0;
+    text-align: left;
+    background: white;
+    box-shadow: 0px 20px 20px -30px black;
+    padding: 15px 30px 30px 25px;
+}
+
+#nav-list.visible {
+    display: block;
+}
+
+#nav-list li {
+    list-style-type: none;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.dropdown-content {
+    padding-top: 4px;
+    background: #f7f7f7;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding: 4px 0 4px 10px;
+    margin-top: 7px;
+}
+
+/* hero */
+
+#hero {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#hero img {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+#blue-text {
+    color: #008aff;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+#blurb {
+    font-size: 20px;
+    color: #7e7e7e;
+    line-height: 28px;
+    margin-bottom: 20px;
+}
+
+/* feature section */
+
+#feature-section {
+    text-align: center;
+    background: #fcfcfc;
+    padding: 50px 20px;
+}
+
+#feature-section .body-text {
+    margin-bottom: 70px;
+}
+
+.feature-box {
+    background: white;
+    margin-bottom: 30px;
+    padding: 30px 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 14px -12px black;
+    border: 1px solid #efefef;
+}
+
+.feature-box img {
+    width: 65%;
+    margin-bottom: 30px;
+}
+
+.feature-box h3 {
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 22px;
+}
+
+.feature-box p {
+    font-size: 17px;
+}
+
+
+
+
+
+
+
+
+/* ----------responsive media query/break points--------- */
+
+/* tablet or large mobile */
+@media only screen and (min-width: 768px) {
+
+    /* typography */
+    h1 {
+        font-size: 45px;
+    }
+
+    /* nav */
+    nav {
+        padding: 40px 90px 0px 90px;
+    }
+
+    #nav-list {
+        padding: 30px 30px 30px 90px;
+    }
+
+    /* hero */
+
+    #hero {
+        /* flex properties */
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        /* other properties */
+        text-align: left;
+        padding: 60px 90px;
+
+    }
+
+    #hero-image-column,
+    #hero-text-column {
+        width: 50%;
+    }
+
+    #hero-text-column {
+        display: inline-block;
+        padding-right: 90px;
+    }
+
+    .feature-boxes-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .feature-box {
+        width: 32%;
+    }
+
+    /* end tablet/large mobile styles */
+}
+
+
+
+/* laptop/desktop */
+@media only screen and (min-width: 1024px) {
+
+    /* nav */
+    nav {
+        padding: 40px 150px 0px 150px;
+    }
+
+    #nav-list {
+        display: block;
+        position: static;
+        text-align: right;
+        box-shadow: none;
+        padding: 0px;
+    }
+
+    #nav-list li {
+        display: inline-block;
+        font-size: 18px;
+        margin-right: 18px;
+    }
+
+    #hamburger-icon {
+        display: none;
+    }
+
+    /* dropdown */
+
+    .dropdown-content {
+        display: none;
+    }
+
+    .dropdown-content:after {
+        content: "";
+        position: absolute;
+        top: -60px;
+        left: 0;
+        width: 200px;
+        height: 100px;
+        /* background: grey; */
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    /* give the dropdown, the parent element,
+    a position relative, to make it the
+    reference point, for the dropdown itself */
+    .dropdown {
+        position: relative;
+    }
+
+    /* fix glitch with before element */
+
+    .dropdown-content {
+        position: absolute;
+        top: 30px;
+        left: 0;
+        text-align: left;
+        width: 200px;
+        /* border: 1px solid black; */
+        padding: 20px;
+        border-radius: 10px;
+        background-color: white;
+        box-shadow: 0px 9px 30px -20px black;
+    }
+
+    /* hero */
+    #hero {
+        padding: 60px 150px;
+    }
+
+    /* features */
+    #feature-section {
+        padding: 50px 150px;
+    }
+}
